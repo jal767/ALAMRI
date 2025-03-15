@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مشروع الفيديو</title>
-  <style>
-    /* ضبط الفيديو ليتناسب مع حجم المتصفح */
-    video {
-      width: 100%;         /* عرض الفيديو يتناسب مع عرض المتصفح */
-      height: auto;        /* الحفاظ على نسبة العرض إلى الارتفاع */
-      max-width: 100%;     /* أقصى عرض الفيديو لا يتجاوز عرض المتصفح */
-      max-height: 100vh;   /* أقصى ارتفاع الفيديو لا يتجاوز ارتفاع المتصفح */
-      object-fit: contain; /* الحفاظ على نسبة العرض إلى الارتفاع دون تشويه */
-      margin: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فيديو بملء الشاشة</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-  <!-- تضمين الفيديو هنا مع الصوت وتشغيله تلقائيًا -->
-  <video autoplay loop>
-    <source src="video.mp4" type="video/mp4">
-    <!-- يمكنك إضافة المزيد من المصادر إذا كان لديك تنسيقات أخرى للفيديو -->
-  </video>
+    <video autoplay loop muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
