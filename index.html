@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فيديو بملء الشاشة</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-        }
-        video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشروع الفيديو</title>
+  <style>
+    /* تعديل الفيديو ليتناسب مع حجم المتصفح */
+    video {
+      width: 100%;
+      height: 100vh; /* تعيين ارتفاع الفيديو ليتناسب مع نافذة المتصفح */
+      object-fit: cover; /* لجعل الفيديو يغطي كامل المساحة دون تشويه */
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-    <video autoplay loop muted playsinline>
-        <source src="video.mp4" type="video/mp4">
-    </video>
+  <!-- تضمين الفيديو هنا -->
+  <video autoplay loop muted>
+    <source src="video.mp4" type="video/mp4">
+  </video>
 </body>
 </html>
