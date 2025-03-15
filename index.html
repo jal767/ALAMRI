@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مشروع الفيديو</title>
   <style>
-    /* تعديل الفيديو ليتناسب مع حجم المتصفح */
+    /* ضبط الفيديو ليكون بحجم 1920x1080 */
     video {
-      width: 100%;
-      height: 100vh; /* تعيين ارتفاع الفيديو ليتناسب مع نافذة المتصفح */
-      object-fit: cover; /* لجعل الفيديو يغطي كامل المساحة دون تشويه */
+      width: 1920px;       /* العرض 1920 بيكسل */
+      height: 1080px;      /* الارتفاع 1080 بيكسل */
+      object-fit: cover;   /* لضمان تغطية كامل المساحة دون تشويه */
       margin: 0;
     }
   </style>
 </head>
 <body>
-  <!-- تضمين الفيديو هنا -->
-  <video autoplay loop muted>
+  <!-- تضمين الفيديو هنا مع الصوت وتشغيله تلقائيًا -->
+  <video autoplay loop>
     <source src="video.mp4" type="video/mp4">
+    <!-- يمكن إضافة المزيد من المصادر إذا كان لديك تنسيقات أخرى للفيديو -->
   </video>
 </body>
 </html>
